@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import ToolCard from "@/components/ToolCard"
-import { Brain, Image, MessageSquare, ArrowRight } from "lucide-react"
+import { ToolCard } from "@/components/"
+import { Brain, Image, MessageSquare } from "lucide-react"
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
                   <Link href="#tools">Explore Tools</Link>
                 </Button>
                 <Button variant="outline" className="text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-gray-900" asChild>
-                  <Link href="#about">About Project</Link>
+                  <Link href="https://github.com/NHeroOP" target="_blank">About Me</Link>
                 </Button>
               </div>
             </div>
@@ -48,24 +48,27 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <ToolCard
               icon={<Brain className="w-6 h-6 mr-2" />}
-              title="Text Generation"
-              desc={"Harness the power of AI to create compelling content. Our text generation tool can help you with\neverything from creative writing to professional reports."}
+              title="Text Summarizer"
+              desc={"A powerful text summarizer that condenses lengthy content into concise, accurate summaries.\n Ideal for quickly grasping key insights from articles, documents, and reports."}
               btnClass="from-blue-500 to-teal-400 hover:from-blue-600 hover:to-teal-500 focus:ring-teal-500"
-              btnName="Generate Text"
+              btnName="Summarize Text"
+              page="/text-summarizer"
             />
             <ToolCard
               icon={<Image className="w-6 h-6 mr-2" />}
-              title="Image Analysis"
-              desc={"Unlock insights from your images with our AI-powered analysis tool. Detect objects, recognize faces,\nand extract valuable information from visual data."}
+              title="lorem ipsum"
+              desc={"lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."}
               btnClass="from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 focus:ring-pink-500"
-              btnName="Analyze Images"
+              btnName="Lorem Ipsum"
+              page=""
             />
             <ToolCard
               icon={<MessageSquare className="w-6 h-6 mr-2" />}
-              title="AI Chatbot"
-              desc={"Experience the future of conversation with our AI chatbot. Engage in natural language interactions\nand get instant responses to your queries."}
+              title="Lorem ip"
+              desc={"lorem ipsum dolor sit amet, consectetur adipiscing elit.\nSuspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor."}
               btnClass="from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:ring-purple-500"
-              btnName="Start Chatting"
+              btnName="Lorem Ipsum"
+              page=""
             />
             
           </div>
