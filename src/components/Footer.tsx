@@ -13,19 +13,19 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} AI Tools. A portfolio project by <Link href={"https://github.com/NHeroOP"}>NHero</Link>.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} AI Tools. A portfolio project by <Link href={"https://github.com/NHeroOP"} target="_blank">NHero</Link>.</p>
           </div>
 
           <nav className="flex gap-4 sm:gap-6 mt-4 md:mt-0">
-            <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://github.com/NHeroOP">
+            <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://github.com/NHeroOP" target="_blank">
               <Github className="h-5 w-5 mr-1" />
               GitHub
             </Link>
-            <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://github.com/NHeroOP/ai-tools-web">
+            <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://github.com/NHeroOP/ai-tools-web" target="_blank">
               <Code2 className="h-5 w-5 mr-1" />
               Project Repo
             </Link>
-            <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://www.nhero.tech/">
+            <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://www.nhero.tech/" target="_blank">
               <Globe className="h-5 w-5 mr-1" />
               Portfolio
             </Link>
