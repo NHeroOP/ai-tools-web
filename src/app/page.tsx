@@ -2,53 +2,14 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Brain, Cpu, Image, Menu, MessageSquare, X, Github, Globe, Code2, ArrowRight } from "lucide-react"
+import { Brain, Cpu, Image, MessageSquare, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { ReactNode, useState } from "react"
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen text-gray-300 bg-gray-900">
-      <header className="px-4 lg:px-6 h-16 flex items-center border-b border-gray-800">
-        <Link className="flex items-center justify-center" href="#">
-          <Cpu className="h-6 w-6 mr-2 text-blue-400" />
-          <span className="font-bold text-xl text-white">AI Tools</span>
-        </Link>
-        <nav className="ml-auto gap-4 sm:gap-6 hidden md:flex">
-          <Link className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            Home
-          </Link>
-          <Link className="text-sm font-medium hover:text-blue-400 transition-colors" href="#tools">
-            Tools
-          </Link>
-          <Link className="text-sm font-medium hover:text-blue-400 transition-colors" href="#about">
-            About
-          </Link>
-        </nav>
-        <Button
-          className="ml-auto md:hidden"
-          variant="ghost"
-          size="icon"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </Button>
-      </header>
-      {isMenuOpen && (
-        <nav className="flex flex-col gap-4 p-4 bg-gray-800 md:hidden">
-          <Link className="text-sm font-medium hover:text-blue-400 transition-colors" href="#">
-            Home
-          </Link>
-          <Link className="text-sm font-medium hover:text-blue-400 transition-colors" href="#tools">
-            Tools
-          </Link>
-          <Link className="text-sm font-medium hover:text-blue-400 transition-colors" href="#about">
-            About
-          </Link>
-        </nav>
-      )}
+    <>
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-900">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -148,34 +109,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="w-full py-6 bg-gray-900 border-t border-gray-800">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-4">
-              <Cpu className="h-6 w-6 text-blue-400" />
-              <span className="font-bold text-white">AI Tools Demo</span>
-            </div>
-            <nav className="flex gap-4 sm:gap-6 mt-4 md:mt-0">
-              <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://github.com/NHeroOP">
-                <Github className="h-5 w-5 mr-1" />
-                GitHub
-              </Link>
-              <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://github.com/NHeroOP/ai-tools-web">
-                <Code2 className="h-5 w-5 mr-1" />
-                Project Repo
-              </Link>
-              <Link className="text-sm hover:text-blue-400 transition-colors flex items-center" href="https://www.nhero.tech/">
-                <Globe className="h-5 w-5 mr-1" />
-                Portfolio
-              </Link>
-            </nav>
-          </div>
-          <div className="mt-8 border-t border-gray-800 pt-8 flex justify-center">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} AI Tools. A portfolio project by <Link href={"https://github.com/NHeroOP"}>NHero</Link>.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }
 

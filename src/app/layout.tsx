@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { themeChange } from 'theme-change'
 import { useEffect } from "react";
+import MenuBar from "@/components/MenuBar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="dracula">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="min-h-screen text-gray-300 bg-gray-900">
+          <MenuBar />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
