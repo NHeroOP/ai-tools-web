@@ -84,7 +84,7 @@ export default function TextSummarizer() {
                     <CardDescription className="text-gray-400">Here's your summarized text:</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-300">{summary.summary.split("\n").map((str: any) => <><p>{str}</p><br/></>)}</p>
+                    <p className="text-gray-300">{summary.summary.split("\n\n").map((str: any) => <><p>{str}</p><br/></>)}</p>
                   </CardContent>
                 </Card>
               </li>
